@@ -5,6 +5,9 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    @if( config('settings.site_favicon') )
+        <link rel="shortcut icon" type="image/x-icon" href="{{ asset('storage/'.config('settings.site_favicon')) }}" />
+    @endif
     <link rel="stylesheet" type="text/css" href="{{ asset('backend/css/main.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('backend/css/font-awesome/4.7.0/css/font-awesome.min.css') }}"/>
 </head>
