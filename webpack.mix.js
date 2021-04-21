@@ -11,10 +11,6 @@ const mix = require('laravel-mix');
  |
  */
 
-/*mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        //
-    ]);*/
 mix.copyDirectory('resources/backend', 'public/backend');
 mix.copyDirectory('resources/frontend', 'public/frontend');
 /*
@@ -22,3 +18,4 @@ mix.js('resources/backend/js/app.js', 'public/js')
     .js('resources/assets/js/menu.js', 'public/js')
     .js('resources/assets/js/cart.js', 'public/js')
     .sass('resources/assets/sass/app.scss', 'public/css');*/
+mix.js('resources/js/app.js', 'public/backend/js').vue();
