@@ -38,6 +38,17 @@ Route::group(['prefix'  =>  'admin','namespace' => 'Admin',], function () {
             Route::post('/update', [\App\Http\Controllers\Admin\CategoryController::class, 'update'])->name('admin.categories.update');
             Route::get('/{id}/delete', [\App\Http\Controllers\Admin\CategoryController::class, 'delete'])->name('admin.categories.delete');
         });
+        //attributes
+        Route::group(['prefix'  =>   'attributes'], function() {
+
+            Route::get('/', [\App\Http\Controllers\Admin\AttributeController::class, 'index'])->name('admin.attributes.index');
+            Route::get('/create', [\App\Http\Controllers\Admin\AttributeController::class, 'create'])->name('admin.attributes.create');
+            Route::post('/store', [\App\Http\Controllers\Admin\AttributeController::class, 'store'])->name('admin.attributes.store');
+            Route::get('/{id}/edit', [\App\Http\Controllers\Admin\AttributeController::class, 'edit'])->name('admin.attributes.edit');
+            Route::post('/update', [\App\Http\Controllers\Admin\AttributeController::class, 'update'])->name('admin.attributes.update');
+            Route::get('/{id}/delete', [\App\Http\Controllers\Admin\AttributeController::class, 'delete'])->name('admin.attributes.delete');
+
+        });
     });
 
 

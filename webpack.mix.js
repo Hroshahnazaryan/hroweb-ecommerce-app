@@ -17,3 +17,8 @@ const mix = require('laravel-mix');
     ]);*/
 mix.copyDirectory('resources/backend', 'public/backend');
 mix.copyDirectory('resources/frontend', 'public/frontend');
+/*
+mix.js('resources/backend/js/app.js', 'public/js')
+    .js('resources/assets/js/menu.js', 'public/js')
+    .js('resources/assets/js/cart.js', 'public/js')
+    .sass('resources/assets/sass/app.scss', 'public/css');*/
