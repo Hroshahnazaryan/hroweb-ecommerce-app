@@ -22,4 +22,9 @@ class AttributeValue extends Model
     {
         return $this->belongsTo(Attribute::class);
     }
+
+    public function productAttributes()
+    {
+        return $this->belongsToMany(ProductAttribute::class);
+    }
 }

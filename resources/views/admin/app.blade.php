@@ -5,12 +5,13 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     @if( config('settings.site_favicon') )
         <link rel="shortcut icon" type="image/x-icon" href="{{ asset('storage/'.config('settings.site_favicon')) }}" />
     @endif
     <link rel="stylesheet" type="text/css" href="{{ asset('backend/css/main.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('backend/css/font-awesome/4.7.0/css/font-awesome.min.css') }}"/>
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    @yield('styles')
 </head>
 <body class="app sidebar-mini rtl">
 @include('admin.partials.header')
