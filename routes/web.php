@@ -17,4 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+\Illuminate\Support\Facades\Auth::routes();
 require 'admin.php';
