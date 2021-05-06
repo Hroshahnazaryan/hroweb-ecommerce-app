@@ -1,5 +1,5 @@
 /* ========================
-UIkit bootstrap-ecommerce.com 
+UIkit bootstrap-ecommerce.com
 ===================== */
 /* ==================== INCLUDE FONTS ======================= */
 @import url("../fonts/roboto/font.css");
@@ -494,8 +494,8 @@ article:after,
 .lh-lg {
   line-height: 1.6; }
 
-/*! 
- * grid for 24 of 1 
+/*!
+ * grid for 24 of 1
  * made by bootstrap-ecommerce.com
 */
 .col-1-24 {
@@ -2251,3 +2251,26 @@ ul.row, ul.row-sm {
     margin-left: 0px; }
 
 /*# sourceMappingURL=ui.css.map */
+.bg-dark {
+    background-color: #004182 !important;
+}
+.table{
+    margin-bottom: 0;
+}
+.shopping-cart-wrap .table th, .table td{
+    vertical-align: middle;
+}
+small.text-muted.each {
+    position: relative;
+    top: -8px;
+    left: 1px;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 1);
+    font-size: 16px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+.logoImg{
+    width: 50px;
+}

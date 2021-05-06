@@ -4,11 +4,17 @@
             <div class="row align-items-center">
                 <div class="col-lg-3">
                     <div class="brand-wrap">
-
+                        <a href="{{ url('/') }}">
+                            @if( config('settings.site_logo') != null )
+                                <img class="logoImg" src="{{ asset('storage/'.config('settings.site_logo')) }}" alt="{{ config('settings.site_name') }}">
+                            @else
+                                <h3>{{ config('settings.site_name') }}</h3>
+                            @endif
+                        </a>
                     </div>
                 </div>
-                <div class="col-lg-6 col-sm-6">
-                    <form action="#" class="search-wrap">
+                <div class="col-lg-5 col-sm-6">
+<!--                    <form action="#" class="search-wrap">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search">
                             <div class="input-group-append">
@@ -17,12 +23,18 @@
                                 </button>
                             </div>
                         </div>
-                    </form>
+                    </form>-->
                 </div>
-                <div class="col-lg-3 col-sm-6">
+                <div class="col-lg-4 col-sm-6">
                     <div class="widgets-wrap d-flex justify-content-end">
                         <div class="widget-header">
-
+                            <a href="{{ route('checkout.cart') }}" class="icontext">
+                                <div class="icon-wrap icon-xs bg2 round text-secondary"><i
+                                        class="fa fa-shopping-cart"></i></div>
+                                <div class="text-wrap">
+                                    <small>{{ $cartCount }} items</small>
+                                </div>
+                            </a>
                         </div>
                         @guest
                             <div class="widget-header">

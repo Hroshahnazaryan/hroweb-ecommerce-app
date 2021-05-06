@@ -58,18 +58,25 @@
                         </div>
                         <div class="form-group">
                             <div class="row">
+                                @if ($targetCategory->image != null)
                                 <div class="col-md-2">
-                                    @if ($targetCategory->image != null)
-                                        <figure class="mt-2" style="width: 80px; height: auto;">
-                                            <img src="{{ asset('storage/'.$targetCategory->image) }}" id="categoryImage" class="img-fluid" alt="img">
-                                        </figure>
-                                    @endif
+                                    <figure class="mt-2" style="width: 80px; height: auto;">
+                                        <img src="{{ asset('storage/'.$targetCategory->image) }}" id="categoryImage" class="img-fluid" alt="img">
+                                    </figure>
                                 </div>
                                 <div class="col-md-10">
                                     <label class="control-label">Category Image</label>
                                     <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image"/>
                                     @error('image') {{ $message }} @enderror
                                 </div>
+                                @else
+                                    <div class="col-md-12">
+                                        <label class="control-label">Category Image</label>
+                                        <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image"/>
+                                        @error('image') {{ $message }} @enderror
+                                    </div>
+                                @endif
+
                             </div>
                         </div>
                     </div>
